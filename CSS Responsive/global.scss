@@ -1,0 +1,71 @@
+//No se cuál de los es el responsive que tengo que tener en cuenta.
+/*Móvil: 360 x 640.
+Móvil: 375 x 667.
+Móvil: 360 x 720.
+iPhone X: 375 x 812.
+Pixel 2: 411 x 731.
+Tableta: 768 x 1024.
+Un ordenador portátil: 1366 x 768.
+Un ordenador portátil o desktop de alta resolución: 1920 x 1080.*/
+
+/*360×640 (móvil pequeño): 22,64%.
+1366×768 (ordenador portátil medio): 11,98%.
+1920×1080 (escritorio grande): 7,35%.
+375×667 (móvil medio): 5%.
+1440×900 (escritorio medio): 3,17%.
+720×1280 (móvil grande): 2,74%.*/
+
+/////Global attributes
+
+//Attributes: Colors
+$Color-Green-1: #28594B;
+$Color-Green-2: #297350;
+$Color-Green-3: #7EBFA1;
+$Color-Green-4: #779C84;
+$Color-Black-Text: #232323;
+$Color-Orange-1: #EAA58C;
+$Color-Orange-2: #F2B6A0;
+$Color-White: #FFFFFF;
+$Color-Gray-BG: #F2F2F2;
+
+//Attributes: Text Styles
+$titles: 20px;
+$body: 16px;
+
+/////Web design CSS
+// 
+//Global CSS
+*{
+    padding: 0%;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    background: $Color-Gray-BG;
+    background-color: blue;
+
+    width:100%;
+}
+.bootscreen__img{
+    background-color: red;
+    position: absolute;
+    display: flex;
+}
+//Class
+//Celulares con el width más pequeño
+@media screen and (max-width: 361px){
+    .bootscreen__img{
+        left: 15%;
+        top: 25%;
+    }
+}
+
+//360×640 (móvil pequeño): 22,64%.
+@media screen and (max-width: 720px) and (min-width: 361px){
+    .bootscreen__img{
+        left: 25%;
+        top: 35%;
+    }
+}
+
