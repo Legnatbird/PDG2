@@ -16,6 +16,7 @@ Un ordenador portátil o desktop de alta resolución: 1920 x 1080.*/
 720×1280 (móvil grande): 2,74%.*/
 
 /////Global attributes
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
 //Attributes: Colors
 $Color-Green-1: #28594B;
@@ -29,43 +30,158 @@ $Color-White: #FFFFFF;
 $Color-Gray-BG: #F2F2F2;
 
 //Attributes: Text Styles
-$titles: 20px;
-$body: 16px;
+$titles: 1.25em;
+$body: 1em;
 
 /////Web design CSS
 // 
 //Global CSS
 *{
+    margin: 0;
     padding: 0%;
     box-sizing: border-box;
-    margin: 0;
+    //All the text are made of Poppins!
+    font-family: "Poppins";
 }
+
 
 body {
+    max-width: 100% !important;
     background: $Color-Gray-BG;
-    background-color: blue;
+}
 
-    width:100%;
+.text{
+    color:$Color-Green-1;
+    //Almost everything has this setup
+    font-size: $body;
+    line-height: 24px;
+    font-weight: 400;
 }
-.bootscreen__img{
-    background-color: red;
-    position: absolute;
-    display: flex;
+
+.background{
+    height: 100vh;
+    width: 100vw;
+    background-size:cover;
+    &-1{
+        background-image:url(../Images/background-decorations/background-1.png);
+    }
+    &-2{
+        background-image:url(../Images/background-decorations/background-2.png);
+    }
+    &-3{
+        background-image:url(../Images/background-decorations/background-3.png);
+    }
 }
-//Class
+
+.button{
+        width: 165px;
+        height: 42px;
+        padding: 10px;
+        text-transform:uppercase;
+        font-weight: bold;
+        border-radius: 8px;
+        color:$Color-White;
+        text-align: center;
+        margin-top: 5%;
+        font-weight: 700;
+        text-decoration: none;
+    &__orange{      
+        background-color: $Color-Orange-1;
+    }
+    &__green{
+        background-color: $Color-Green-1;
+    }
+}
+
+//index.html
+.bootscreen{
+    &__img{
+        position: absolute;
+        display: flex;
+    }
+}
+
+.login-register{
+    &__logo{
+        position:absolute;
+    }
+    &__text{
+        position:absolute;
+        font-size: 2em;
+    }
+}
+
+.start{
+    &__logo{
+        position:absolute;
+        &-2{
+            position:absolute;
+        }
+    }
+    &__text{
+        padding: 100% 20% 0 20%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        & p {
+            margin-top: 5%;
+            text-align: center;
+        }
+    }
+}
+
+.register__input{
+    padding-top: 110%;
+}
+
 //Celulares con el width más pequeño
 @media screen and (max-width: 361px){
-    .bootscreen__img{
-        left: 15%;
-        top: 25%;
+    .bootscreen{
+        &__img{
+            left: 15%;
+            top: 25%;
+        }     
+    }
+    .start{
+        &__logo{
+            left: 15%;
+            top: 10%;
+        }
     }
 }
-
 //360×640 (móvil pequeño): 22,64%.
 @media screen and (max-width: 720px) and (min-width: 361px){
-    .bootscreen__img{
-        left: 25%;
-        top: 35%;
+    //index.html
+    .bootscreen{
+        //First image of background
+        &__img{
+            left: 25%;
+            top: 35%;
+        } 
+    }
+    //start.html
+    .start{
+        &__logo{
+            left: 33%;
+            top: 10%;
+            &-2{
+                left: 25%;
+                top: 30%;
+            }
+        }
+    }
+    //register or login.html
+    .login-register{
+        &__logo{
+            left:25%;
+            top:3%;
+        }
+        &__text{
+            top: 15%;
+            padding-left: 5%;
+            //p attributes, of letter.
+            font-weight:600;
+            line-height:48px;
+        }
     }
 }
-

@@ -13,25 +13,112 @@ Un ordenador portátil o desktop de alta resolución: 1920 x 1080.*/
 375×667 (móvil medio): 5%.
 1440×900 (escritorio medio): 3,17%.
 720×1280 (móvil grande): 2,74%.*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
 * {
+  margin: 0;
   padding: 0%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  margin: 0;
+  font-family: "Poppins";
 }
 
 body {
+  max-width: 100% !important;
   background: #F2F2F2;
-  background-color: blue;
-  width: 100%;
+}
+
+.text {
+  color: #28594B;
+  font-size: 1em;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+.background {
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+}
+
+.background-1 {
+  background-image: url(../Images/background-decorations/background-1.png);
+}
+
+.background-2 {
+  background-image: url(../Images/background-decorations/background-2.png);
+}
+
+.background-3 {
+  background-image: url(../Images/background-decorations/background-3.png);
+}
+
+.button {
+  width: 165px;
+  height: 42px;
+  padding: 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 8px;
+  color: #FFFFFF;
+  text-align: center;
+  margin-top: 5%;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.button__orange {
+  background-color: #EAA58C;
+}
+
+.button__green {
+  background-color: #28594B;
 }
 
 .bootscreen__img {
-  background-color: red;
   position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.login-register__logo {
+  position: absolute;
+}
+
+.login-register__text {
+  position: absolute;
+  font-size: 2em;
+}
+
+.start__logo {
+  position: absolute;
+}
+
+.start__logo-2 {
+  position: absolute;
+}
+
+.start__text {
+  padding: 100% 20% 0 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.start__text p {
+  margin-top: 5%;
+  text-align: center;
+}
+
+.register__input {
+  padding-top: 110%;
 }
 
 @media screen and (max-width: 361px) {
@@ -39,12 +126,34 @@ body {
     left: 15%;
     top: 25%;
   }
+  .start__logo {
+    left: 15%;
+    top: 10%;
+  }
 }
 
 @media screen and (max-width: 720px) and (min-width: 361px) {
   .bootscreen__img {
     left: 25%;
     top: 35%;
+  }
+  .start__logo {
+    left: 33%;
+    top: 10%;
+  }
+  .start__logo-2 {
+    left: 25%;
+    top: 30%;
+  }
+  .login-register__logo {
+    left: 25%;
+    top: 3%;
+  }
+  .login-register__text {
+    top: 15%;
+    padding-left: 5%;
+    font-weight: 600;
+    line-height: 48px;
   }
 }
 /*# sourceMappingURL=global.css.map */
