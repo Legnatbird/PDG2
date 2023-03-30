@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Vanilla Web Component Example</title>
+  <link rel="import" href="/prueba.html">
+</head>
+
+<body>
+  <my-button></my-button>
+  <my-footer></my-footer>
+
+  <script>
+    class MyButton extends HTMLElement {
+      constructor() {
+        super();
+
+        const template = document.createElement('template');
+        template.innerHTML = `
+          <style>
+            button {
+              background-color: blue;
+              color: white;
+              padding: 10px;
+              border-radius: 5px;
+            }
+          </style>
+          <button>Hello, World!</button>
+          <div>Why I cant appear like a normal</div>
+        `;
+
+        const shadowRoot = this.attachShadow({ mode: 'open' });
+        shadowRoot.appendChild(template.content.cloneNode(true));
+      }
+    }
+
+    customElements.define('my-button', MyButton);
+  </script>
+</body>
+
+</html>

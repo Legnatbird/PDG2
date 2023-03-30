@@ -17,8 +17,7 @@ Un ordenador portátil o desktop de alta resolución: 1920 x 1080.*/
 * {
   margin: 0;
   padding: 0%;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   font-family: "Poppins";
 }
 
@@ -43,15 +42,12 @@ p {
   width: 100vw;
   background-size: cover;
 }
-
 .background-1 {
   background-image: url(../Images/background-decorations/background-1.png);
 }
-
 .background-2 {
   background-image: url(../Images/background-decorations/background-2.png);
 }
-
 .background-3 {
   background-image: url(../Images/background-decorations/background-3.png);
 }
@@ -69,26 +65,21 @@ p {
   font-weight: 700;
   text-decoration: none;
 }
-
 .button__orange {
   background-color: #EAA58C;
 }
-
 .button__green {
   background-color: #28594B;
 }
 
 .bootscreen__img {
   position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
 .login-register__logo {
   position: absolute;
 }
-
 .login-register__text {
   position: absolute;
   font-size: 2em;
@@ -97,25 +88,15 @@ p {
 .start__logo {
   position: absolute;
 }
-
 .start__logo-2 {
   position: absolute;
 }
-
 .start__text {
   padding: 100% 20% 0 20%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
 }
-
 .start__text p {
   margin-top: 5%;
   text-align: center;
@@ -135,7 +116,6 @@ p {
     top: 10%;
   }
 }
-
 @media screen and (max-width: 720px) and (min-width: 361px) {
   .bootscreen__img {
     left: 25%;
@@ -159,5 +139,4 @@ p {
     font-weight: 600;
     line-height: 48px;
   }
-}
-/*# sourceMappingURL=global.css.map */
+}/*# sourceMappingURL=global.css.map */

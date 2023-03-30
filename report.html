@@ -1,5 +1,7 @@
 <!DOCTYPE html>
+
 <html lang="es">
+
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,11 +11,14 @@
         <title>TuBosque</title>
         <!--CSS-->
         <link rel="stylesheet" href="./CSS Responsive/global.css">
+        <link rel="import" href="./my-button.html">
     </head>
+
 <body>
-    <header>
-        <nav class="menu">
-            <!--<button onclick=history.back()> < </button>-->
+    <my-button></my-button>
+    <my-footer></my-footer>
+    <nav class="menu">
+        <!--<button onclick=history.back()> < </button>-->
         <a href=javascript:history.back()>"<"</a>
             <p>Menu</p>
             <ul class="menu__list">
@@ -25,32 +30,26 @@
                 </li>
             </ul>
         </nav>
-    </header>
-    <section>
-        <div class="auth profile__name" id="username">
-            Cargando la información...
-        </div>
-    </section>
-    <footer>
-        <div class="footer__report">
-            <a href="">
-                <p>Reportar</p>
-            </a>
-        </div>
 
-        <div class="footer__home">
-            <a href="./home.html">
-                <p>Inicio</p>
-            </a>
-        </div>
-
-        <div class="footer__profile">
-            <a href="./profile.html">
-                <p>Perfil</p>
-            </a>
-        </div>
-    </footer>
+        <footer>
+            <div class="footer__report">
+                <a href="">
+                    <p>Reportar</p>
+                </a>
+            </div>
+    
+            <div class="footer__home">
+                <a href="./home.html">
+                    <p>Inicio</p>
+                </a>
+            </div>
+    
+            <div class="footer__profile">
+                <a href="./profile.html">
+                    <p>Perfil</p>
+                </a>
+            </div>
+        </footer>
+        
 </body>
-<script src="./js/utils.js"></script>
-<script type="module" src="./js/profile.js"></script>
 </html>
