@@ -50,7 +50,11 @@ body {
     background: $Color-Gray-BG;
 }
 
-.text{
+a{
+    text-decoration: none; 
+}
+
+p{
     color:$Color-Green-1;
     //Almost everything has this setup
     font-size: $body;

@@ -27,7 +27,11 @@ body {
   background: #F2F2F2;
 }
 
-.text {
+a {
+  text-decoration: none;
+}
+
+p {
   color: #28594B;
   font-size: 1em;
   line-height: 24px;
