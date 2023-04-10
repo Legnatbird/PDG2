@@ -11,12 +11,13 @@
         <title>TuBosque</title>
         <!--CSS-->
         <link rel="stylesheet" href="./CSS Responsive/global.css">
-        <link rel="import" href="./my-button.html">
-    </head>
+       <link rel="import" href="./my-button.html">
+        
+    </head> 
 
 <body>
     <my-button></my-button>
-    <my-footer></my-footer>
+    
     <nav class="menu">
         <!--<button onclick=history.back()> < </button>-->
         <a href=javascript:history.back()>"<"</a>
@@ -29,27 +30,14 @@
                     <button id="signOut">Sign out!
                 </li>
             </ul>
+            <my-navigation></my-navigation>
         </nav>
 
         <footer>
-            <div class="footer__report">
-                <a href="">
-                    <p>Reportar</p>
-                </a>
-            </div>
-    
-            <div class="footer__home">
-                <a href="./home.html">
-                    <p>Inicio</p>
-                </a>
-            </div>
-    
-            <div class="footer__profile">
-                <a href="./profile.html">
-                    <p>Perfil</p>
-                </a>
-            </div>
+            <my-footer></my-footer>
         </footer>
         
 </body>
+<script src="./js/components-html/footer-html.js"></script>
+<script type="module" src="./js/components-html/navigation-html.js"></script>
 </html>
