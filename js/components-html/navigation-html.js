@@ -1,7 +1,10 @@
 class MyNavigation extends HTMLElement {
     constructor() {
         super();
+        this.connectedCallback();
         this.attachShadow({ mode: 'open' });
+        this.auth = firebaseApp.auth();
+        this.db = firebaseApp.firestore();
         this.shadowRoot.innerHTML = `
         
         <style>
@@ -50,9 +53,9 @@ class MyNavigation extends HTMLElement {
               firebase.initializeApp(firebaseConfig);
               // Now you can start using Firebase in your component
             }
+            document.head.appendChild(firebaseDatabase);
         }
-        document.head.appendChild(firebaseApp);
-
+    document.head.appendChild(firebaseApp);
    
     }
 }

@@ -4,14 +4,7 @@ class MyFooter extends HTMLElement {
         super();
         this.attachShadow({ mode: 'open' });
         this.shadowRoot.innerHTML = `
-    <style>
-    *{
-        font-family: Poppins;
-    }
-            a {
-                text-decoration: none; 
-            }
-    </style>
+    <link rel="stylesheet" href="./CSS Responsive/global.css">
 
     <div class="footer__report">
             <a href="">
