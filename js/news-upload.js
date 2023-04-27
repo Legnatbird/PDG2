@@ -18,7 +18,7 @@ const uploadNewsForm = document.getElementById("uploadNews");
 const uploadImage = async (file) => {
     try {
         console.log(file.name);
-        const storageRef = ref(storage,`products/images/${file.name}`);
+        const storageRef = ref(storage,`news/images/${file.name}`);
         const image = await uploadBytes(storageRef, file);
         return await getDownloadURL(ref(storage, image.ref.fullPath));
     } catch (e) {
@@ -28,12 +28,12 @@ const uploadImage = async (file) => {
 
 //Upload the news
 const uploadNew = async () => {
-    const title = uploadNewsForm.title.value;
-    const summary = uploadNewsForm.summary.value;
-    const description = uploadNewsForm.description.value;
-    const type = uploadNewsForm.type.value;
-    const image = uploadNewsForm.images.files;
-    const date = uploadNewsForm.date.value;
+    const title = uploadNewsForm.title.value,
+        summary = uploadNewsForm.summary.value,
+        description = uploadNewsForm.description.value,
+        type = uploadNewsForm.type.value,
+        image = uploadNewsForm.images.files,
+        date = uploadNewsForm.date.value;
 
     if(title && summary && description && image && date){
         //It kind a feedback for me... I don't know if this function is ok or not

@@ -13,24 +13,18 @@
 </head>
 
 <body>
-    <div class="filters">
-        <div>
-            <label for="categories">Filtrar por: </label>
-            <select name="categories" id="categories">
-                    <option value="newer">Novedad</option>
-                    <option value="comunity">Comunidad</option>
-                    <option value="activity">Actividades</option>
-            </select>
+    <div class="news" id="news">
+        <div class="news__image">
+            <img src="" alt="" class="news__mainImage" id="image">
+        </div>
+
+        <div class="news__description">
+            <h1 class="news__title" id="title"></h1>
+            <p class="news__description" id="description"></p>
+            <p class="news__type" id="type"></p>
+            <p class="news__date" id="date"></p>
         </div>
     </div>
-    <div class="news">
-        <h2>Prioritarias</h2>
-        <div class="news__priority" id="priority"></div>
-        <h2>Noticias separadas?</h2>
-        <div class="news__normals" id="normals"></div>
-    </div>
-
-    <!--FOOTER-->
     <footer>
         <my-footer></my-footer>
     </footer>
@@ -40,5 +34,6 @@
 <script type="module" src="./js/components-html/navigation-html.js"></script>
 <!--Javascript-->
 <script src="./js/utils.js"></script>
-<script type="module" src="./js/news.js"></script>
+<script type="module" src="./js/news-click.js"></script>
+
 </html>

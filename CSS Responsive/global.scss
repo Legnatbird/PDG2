@@ -16,7 +16,7 @@ Un ordenador portátil o desktop de alta resolución: 1920 x 1080.*/
 720×1280 (móvil grande): 2,74%.*/
 
 /////Global attributes
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
 //Attributes: Colors
 $Color-Green-1: #28594B;
@@ -30,8 +30,40 @@ $Color-White: #FFFFFF;
 $Color-Gray-BG: #F2F2F2;
 
 //Attributes: Text Styles
+//$titles: 1.25em;
+//$body: 1em;
+
+//Font-size
+//$largeTitle: 32px;
+//$titles: 20px;
+//$largeText: 20px;
+/*$body: 16px;
+$bodyBold: 16px;
+$inputText: 16px;
+$homeCardTitle: 16px;
+$smallBody: 12px;
+$link: 12px;*/
+//Font-size in em for diferent type of cellphone
+$largeTitle: 2em;
 $titles: 1.25em;
 $body: 1em;
+$smallBody: 0.75em;
+
+//global atributtes for font.
+.homeCardTitle{
+    font-size: $body;
+    line-height: 115%;
+    &__bold{
+        font-weight: 700;
+    }
+}
+
+.smallBody{
+    font-size: $smallBody;
+    &__link{
+        font-weight: 500;
+    }
+}
 
 /////Web design CSS
 // 
@@ -44,6 +76,14 @@ $body: 1em;
     font-family: "Poppins";
 }
 
+//Left and Right have a margin of 20px that is 
+.hasMargin{
+    margin: 0 1.25em 0 1.25em;
+}
+
+.hasMarginLeft {
+    margin-left: 20px;
+}
 
 body {
     max-width: 100% !important;
@@ -54,12 +94,23 @@ a{
     text-decoration: none; 
 }
 
+//Font-styles
 p{
     color:$Color-Green-1;
     //Almost everything has this setup
     font-size: $body;
     line-height: 24px;
     font-weight: 400;
+}
+
+h1{
+    color: $Color-White;
+    font-size: $largeTitle;
+    font-weight: 600;
+}
+
+h2{
+    font-size: $titles;
 }
 
 .background{
@@ -74,6 +125,12 @@ p{
     }
     &-3{
         background-image:url(../Images/background-decorations/background-3.png);
+    }
+    &__blue{
+        margin-bottom: 25px;
+        padding-bottom: 10px;
+        background-color: $Color-Green-1;
+        border-radius: 0px 0px 26px 26px;
     }
 }
 
@@ -136,6 +193,43 @@ p{
 
 .register__input{
     padding-top: 110%;
+}
+
+
+//HOME.html
+.home{
+    &__scroll{
+        height: 200px;
+        overflow: scroll;
+    }
+}
+
+
+//MENU
+.menu{
+    background-color: white;
+    &:hover{
+        display: block;
+        position: absolute;
+        width: 500px;
+        height: 500px;
+        background-color: red;
+    }
+    &__drop{
+        display:none;
+    }
+}
+
+//news
+.news{
+    background-color: $Color-White;
+    border-radius: 16px;
+    margin: 20px;
+    padding: 10px;
+    &__cardtext{
+        line-height: 1.5;
+        margin-right:20%;
+    }
 }
 
 //Celulares con el width más pequeño

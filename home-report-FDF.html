@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" type="image/png" href="./Images/icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TuBosque</title>
+    <!--CSS-->
+    <link rel="stylesheet" href="./CSS Responsive/global.css">
+</head>
+
+<body>
+    <my-button></my-button>
+
+    <nav class="menu">
+        <!--<button onclick=history.back()> < </button>-->
+        <a href=javascript:history.back()>"<"< /a>
+                <p>Menu</p>
+                <ul class="menu__list">
+                    <li>Sobre tuBosque</li>
+                    <li>Preguntas frecuentes</li>
+                    <li>Ayuda</li>
+                    <li>
+                        <button id="signOut">Sign out!
+                    </li>
+                </ul>
+                <my-navigation></my-navigation>
+    </nav>
+
+    <section>
+        <h1>Reportes</h1>
+        <p>Cuéntanos, ¿qué sucede?</p>
+        <form id="report__form" action="#">
+            <textarea name="description" id="" cols="35" rows="5"></textarea>
+            <p>Opcional: Insertar imagen de soporte.</p>
+            <p>Le llegarán al encargado de la entidad de atender el reporte</p>
+            <input name="image__take" type="file" accept="image/*" capture>
+            <input name="image__upload" type="file" accept=".jpg, .png" name="images" id="mainImage">
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <!--FOOTER-->
+    <footer>
+        <my-footer></my-footer>
+    </footer>
+
+</body>
+<!--HTML COMPONENTS-->
+<script src="./js/components-html/footer-html.js"></script>
+<script type="module" src="./js/components-html/navigation-html.js"></script>
+<!--Javascript-->
+<script src="./js/utils.js"></script>
+<!--SMTPJS to send e-mail-->
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+
+<script>
+    const form = document.getElementById("report__form");
+    const description__form = form.description.value,
+        image__take = uploadNewsForm.images__take.files,
+        image__upload = uploadNewsForm.images__upload.files;
+        function sendEmail(){
+            Email.send({
+                Host: "smtp.elasticemail.com",
+                Username: "Yoshiki :)",
+                Password: "password",
+                To: 'them@website.com',
+                From: "you@isp.com",
+                Subject: "This is the subject",
+                Body: "And this is the body"
+            }).then(
+                message => alert(message)
+            );
+        }
+</script>
+
+</html>

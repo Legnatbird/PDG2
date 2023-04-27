@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,26 +10,18 @@
     <!--CSS-->
     <link rel="stylesheet" href="./CSS Responsive/global.css">
 </head>
-
 <body>
-    <div class="filters">
-        <div>
-            <label for="categories">Filtrar por: </label>
-            <select name="categories" id="categories">
-                    <option value="newer">Novedad</option>
-                    <option value="comunity">Comunidad</option>
-                    <option value="activity">Actividades</option>
-            </select>
-        </div>
-    </div>
-    <div class="news">
-        <h2>Prioritarias</h2>
-        <div class="news__priority" id="priority"></div>
-        <h2>Noticias separadas?</h2>
-        <div class="news__normals" id="normals"></div>
-    </div>
-
-    <!--FOOTER-->
+    <a href=javascript:history.back()>"<"</a>
+    <!--Main things-->
+    <section>
+        <h2>Estado actual del bosque</h2>
+        <img src="" alt="">
+        <p>El 97% de la vegetación presente en el bosque se encuentra en estado regular, lo que quiere decir que están en conflicto con postes o redes, enfermos por patógenos o plagas. El 2% están secos o muertos por lo que deben ser erradicados de inmediato y solo el 1% están saludables.</p>
+        <h2>Video explicativo</h2>
+        <video src=""></video>
+        <p>Podrás saber un poco más por qué el bosque se encuentra así.</p>
+    </section>
+    <!--FOOTER or MENU-->
     <footer>
         <my-footer></my-footer>
     </footer>
@@ -40,5 +31,4 @@
 <script type="module" src="./js/components-html/navigation-html.js"></script>
 <!--Javascript-->
 <script src="./js/utils.js"></script>
-<script type="module" src="./js/news.js"></script>
 </html>

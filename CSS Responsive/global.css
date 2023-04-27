@@ -13,12 +13,44 @@ Un ordenador portátil o desktop de alta resolución: 1920 x 1080.*/
 375×667 (móvil medio): 5%.
 1440×900 (escritorio medio): 3,17%.
 720×1280 (móvil grande): 2,74%.*/
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+/*$body: 16px;
+$bodyBold: 16px;
+$inputText: 16px;
+$homeCardTitle: 16px;
+$smallBody: 12px;
+$link: 12px;*/
+.homeCardTitle {
+  font-size: 1em;
+  line-height: 115%;
+}
+
+.homeCardTitle__bold {
+  font-weight: 700;
+}
+
+.smallBody {
+  font-size: 0.75em;
+}
+
+.smallBody__link {
+  font-weight: 500;
+}
+
 * {
   margin: 0;
   padding: 0%;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-family: "Poppins";
+}
+
+.hasMargin {
+  margin: 0 1.25em 0 1.25em;
+}
+
+.hasMarginLeft {
+  margin-left: 20px;
 }
 
 body {
@@ -37,19 +69,39 @@ p {
   font-weight: 400;
 }
 
+h1 {
+  color: #FFFFFF;
+  font-size: 2em;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 1.25em;
+}
+
 .background {
   height: 100vh;
   width: 100vw;
   background-size: cover;
 }
+
 .background-1 {
   background-image: url(../Images/background-decorations/background-1.png);
 }
+
 .background-2 {
   background-image: url(../Images/background-decorations/background-2.png);
 }
+
 .background-3 {
   background-image: url(../Images/background-decorations/background-3.png);
+}
+
+.background__blue {
+  margin-bottom: 25px;
+  padding-bottom: 10px;
+  background-color: #28594B;
+  border-radius: 0px 0px 26px 26px;
 }
 
 .button {
@@ -65,21 +117,26 @@ p {
   font-weight: 700;
   text-decoration: none;
 }
+
 .button__orange {
   background-color: #EAA58C;
 }
+
 .button__green {
   background-color: #28594B;
 }
 
 .bootscreen__img {
   position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
 .login-register__logo {
   position: absolute;
 }
+
 .login-register__text {
   position: absolute;
   font-size: 2em;
@@ -88,15 +145,25 @@ p {
 .start__logo {
   position: absolute;
 }
+
 .start__logo-2 {
   position: absolute;
 }
+
 .start__text {
   padding: 100% 20% 0 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 .start__text p {
   margin-top: 5%;
   text-align: center;
@@ -104,6 +171,39 @@ p {
 
 .register__input {
   padding-top: 110%;
+}
+
+.home__scroll {
+  height: 200px;
+  overflow: scroll;
+}
+
+.menu {
+  background-color: white;
+}
+
+.menu:hover {
+  display: block;
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background-color: red;
+}
+
+.menu__drop {
+  display: none;
+}
+
+.news {
+  background-color: #FFFFFF;
+  border-radius: 16px;
+  margin: 20px;
+  padding: 10px;
+}
+
+.news__cardtext {
+  line-height: 1.5;
+  margin-right: 20%;
 }
 
 @media screen and (max-width: 361px) {
@@ -116,6 +216,7 @@ p {
     top: 10%;
   }
 }
+
 @media screen and (max-width: 720px) and (min-width: 361px) {
   .bootscreen__img {
     left: 25%;
@@ -139,4 +240,5 @@ p {
     font-weight: 600;
     line-height: 48px;
   }
-}/*# sourceMappingURL=global.css.map */
+}
+/*# sourceMappingURL=global.css.map */

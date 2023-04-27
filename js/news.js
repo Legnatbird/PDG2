@@ -42,7 +42,7 @@ const newsTemplate = (item) => {
         news.className = "news"; //CSS!
     
         // create a new href with the id, this make the user read the news and without me coding every news html.
-        news.setAttribute("href", `./news.html?id=${item.id}`);
+        news.setAttribute("href", `./home-clicknews.html?id=${item.id}`);
     
         //A don't think it is necesary but it is here for some reasons
         const thumbnail = 'https://user-images.githubusercontent.com/101482/29592647-40da86ca-875a-11e7-8bc3-941700b0a323.png';
