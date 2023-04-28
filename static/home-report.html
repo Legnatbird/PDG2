@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" type="image/png" href="/static/img/icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TuBosque</title>
+    <!--CSS-->
+    <link rel="stylesheet" href="/static/css/global.css">
+</head>
+
+<body>
+    <my-button></my-button>
+
+    <nav class="menu">
+        <!--<button onclick=history.back()> < </button>-->
+        <a href=javascript:history.back()>"<"< /a>
+                <p>Menu</p>
+                <ul class="menu__list">
+                    <li>Sobre tuBosque</li>
+                    <li>Preguntas frecuentes</li>
+                    <li>Ayuda</li>
+                    <li>
+                        <button id="signOut">Sign out!
+                    </li>
+                </ul>
+                <my-navigation></my-navigation>
+    </nav>
+
+    <section>
+        <h2>¿Qué vas a reportar?</h2>
+        <p>Este proceso le llegará directamente a un encargado del DAGMA, quien procederá a atender el reporte. Se
+            enviarán las respuestas a tus solicitudes por el medio que prefieras.</p>
+        <h1>Categorías</h1>
+        <p>Elige lo que quieres reportar</p>
+        <div>
+            <a href="">
+                <img src="" alt="">
+                <h2>Flora</h2>
+                <p>Riesgos y mal manejo</p>
+                <a href=""><img src="" alt=""></a>
+            </a>
+            <a href="">
+                <img src="" alt="">
+                <h2>Desechos</h2>
+                <p>Contaminación del bosque</p>
+                <a href=""><img src="" alt=""></a>
+            </a>
+            <a href="">
+                <img src="" alt="">
+                <h2>Fauna</h2>
+                <p>Animales en riesgo</p>
+                <a href=""><img src="" alt=""></a>
+            </a>
+            <a href="">
+                <img src="" alt="">
+                <h2>Otros</h2>
+                <p>Quejas, reclamos y peticiones</p>
+                <a href=""><img src="" alt=""></a>
+            </a>
+        </div>
+    </section>
+
+    <!--FOOTER-->
+    <footer>
+        <my-footer></my-footer>
+    </footer>
+
+</body>
+<!--HTML COMPONENTS-->
+<script src="/static/js/components-html/footer-html.js"></script>
+<script type="module" src="/static/js/components-html/navigation-html.js"></script>
+<!--Javascript-->
+<script src="/static/js/utils.js"></script>
+
+</html>

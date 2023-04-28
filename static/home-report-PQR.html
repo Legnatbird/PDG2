@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" type="image/png" href="/static/img/icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TuBosque</title>
+    <!--CSS-->
+    <link rel="stylesheet" href="/static/css/global.css">
+</head>
+
+<body>
+    <my-button></my-button>
+
+    <nav class="menu">
+        <!--<button onclick=history.back()> < </button>-->
+        <a href=javascript:history.back()>"<"< /a>
+                <p>Menu</p>
+                <ul class="menu__list">
+                    <li>Sobre tuBosque</li>
+                    <li>Preguntas frecuentes</li>
+                    <li>Ayuda</li>
+                    <li>
+                        <button id="signOut">Sign out!
+                    </li>
+                </ul>
+                <my-navigation></my-navigation>
+    </nav>
+
+    <section>
+        <h2>Quejas,reclamos y peticiones</h2>
+        <div>
+            <h4>Conoce más</h4>
+            <p>Para entender mejor qué proceso hacer, ingresa aquí</p>
+            <img src="" alt="">
+            <a href="">IR</a>
+        </div>
+        <h1>Reportes - QRS</h1>
+        <p>Elige lo que quieres hacer</p>
+        <form action="">
+            <input type="text" placeholder="Detalles">
+            
+        </form>
+    </section>
+
+     <!--FOOTER-->
+     <footer>
+        <my-footer></my-footer>
+    </footer>
+
+</body>
+<!--HTML COMPONENTS-->
+<script src="/static/js/components-html/footer-html.js"></script>
+<script type="module" src="/static/js/components-html/navigation-html.js"></script>
+<!--Javascript-->
+<script src="/static/js/utils.js"></script>
+
+</html>

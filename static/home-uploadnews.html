@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" type="image/png" href="/static/img/icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TuBosque</title>
+    <!--CSS-->
+    <link rel="stylesheet" href="/static/css/global.css">
+</head>
+
+<body>
+    <section class="sign">
+        <img class="sign__image" src="/static/img/create.jpg" alt="">
+        <div class="sign__text">
+            <h2>Noticias nuevas</h2>
+            <form action="" id="uploadNews">
+                <!--<p>Nombre de producto</p>-->
+                <label>Titulo de la noticia</label>
+                <p><input type="text" name="title" placeholder=""></p>
+                <!--<p>Precio</p>-->
+                <label>Resumen de la noticia</label>
+                <p><input type="text" name="summary" placeholder=""></p>
+
+                <!--<p>Descripción del producto</p>-->
+                <label>Descripción de la noticia</label>
+                <p><textarea name="description"></textarea></p>
+
+                <div class="images">
+                    <div class="images__input">
+                        <!--<p>Fotografía principal</p>-->
+                        <label for="name">Fotografía principal</label>
+                        <p><input type="file" accept=".jpg, .png" name="images" id="mainImage"></p>
+                    </div>
+                    <img src="" alt="" id="preview">
+                </div>
+
+                <label>Fecha de la noticia</label>
+                <p><input type="date" name="date" placeholder=""></p>
+
+                <!--<p>Categoría del producto</p>-->
+                <label for="type">Categoría de la noticia</label>
+                <select name="type">
+                    <option value="priority">Prioritarias</option>
+                    <option value="newer">Novedad</option>
+                    <option value="comunity">Comunidad</option>
+                    <option value="activity">Actividades</option>
+                </select>
+                <input class="create__button" type="submit" value="Agregar noticia" id="submitButton">
+                <p id="feedback"></p>
+
+            </form>
+        </div>
+    </section>
+
+    <!--FOOTER-->
+    <footer>
+        <my-footer></my-footer>
+    </footer>
+</body>
+<!--HTML COMPONENTS-->
+<script src="/static/js/components-html/footer-html.js"></script>
+<script type="module" src="/static/js/components-html/navigation-html.js"></script>
+<!--Javascript-->
+<script src="/static/js/utils.js"></script>
+<script type="module" src="/static/js/news-upload.js"></script>
+</html>
